@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+<title>Евромедика</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body class="page">
+	<svg style="display: none;">
+	<symbol id="arrow" viewBox="0 0 20 13">
+		<path id="n48ja" d="M0 6.5c0-.16.07-.3.18-.42L6.37.18a.65.65 0 0 1 .88 0c.25.23.25.6 0 .84L2.13 5.9h17.24c.35 0 .63.27.63.6 0 .33-.28.6-.63.6H2.14l5.12 4.88c.25.24.25.61 0 .85a.65.65 0 0 1-.88 0L.18 6.93A.6.6 0 0 1 0 6.5z"/>
+	</symbol>
+	<symbol id="flamp" viewBox="0 0 56 48">
+		<path d="M11.45 33.64C4.91 31.82 0 26.54 0 18.9 0 9.45 7.82 4 16.18 4H56v11.45H32.73v8.91h18v11.1h-18v15.81H20.36V15.1H16c-2 0-4.36 1.27-4.36 3.82 0 2 1.27 3.27 2.9 4l-3.09 10.73z"/>
+	</symbol>
+	<symbol id="search" viewBox="0 0 14 14">
+		<path d="M9.18300816,10.3952277 C7.02691518,11.989771 3.97658014,11.9042487 1.90621686,10.0404571 C-0.458292442,7.91186796 -0.649199316,4.26987435 1.47981442,1.90583666 C3.60882816,-0.458201035 7.25154832,-0.649069832 9.61605762,1.47951927 C11.8400633,3.48162356 12.1411108,6.8226174 10.3974462,9.17976128 L14.0021127,12.7844278 L12.7871605,13.99938 L9.18300816,10.3952277 Z M9.18619549,8.84330937 C10.8894065,6.95207922 10.736681,4.03848433 8.84507354,2.33561305 C6.9534661,0.632741768 4.03928997,0.785436805 2.33607898,2.67666696 C0.632867995,4.56789712 0.785593494,7.481492 2.67720093,9.18436329 C4.56880838,10.8872346 7.4829845,10.7345395 9.18619549,8.84330937 Z" fill-rule="nonzero"></path>
+	</symbol>
+</svg>
+	<header class="header">
+	<div class="header__top">
+		<div class="container">
+			<div class="header__contacts">
+				<span>Клиника <strong><a class="link link_strong" href="tel:+73852229506">+7 (3852) 229-506</a>, <a class="link link_strong" href="tel:+79050845231">+7 (905) 084-52-31</a></strong></span>
+				<span>Офис продаж для косметологов <strong><a class="link link_strong" href="tel:+73852534901">+7 (3852) 534-901</a></strong></span>
+			</div>
+			<div class="search">
+				<div class="search__field">
+					<input type="search" placeholder="Поиск">
+					<button class="search__clear"></button>
+				</div>
+				<button class="search__btn">
+					<svg>
+						<use href="#search"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="header__main">
+		<button class="menu"></button>
+		<button class="phones" data-open="phones"><i class="fas fa-phone"></i></button>
+		<div class="header__block">
+			<a href="/" class="logo">
+				<img src="../img/logo-horizont.png"/>
+			</a>
+		</div>
+		<div class="header__block">
+			<nav class="nav">
+	<a href="#">О клинике</a>
+	<a href="#">Желания</a>
+	<a href="#">Лицо</a>
+	<a href="#">Тело</a>
+	<a href="#">Акции</a>
+	<a href="#">Цены</a>
+	<a href="#">Контакты</a>
+</nav>
+		</div>
+		<div class="header__block">
+			<button class="btn btn_pink btn_record">Записаться на прием</button>
+		</div>
+	</div>
+	<div class="modal modal_phones" data-modal="phones">
+		<button class="modal__close"></button>
+		<span class="modal__caption">Телефоны для связи</span>
+		<table>
+			<tr>
+				<td><span>Клиника<strong></td>
+				<td>
+					<a class="link link_strong" href="tel:+73852229506">+7 (3852) 229-506</a><br>
+					<a class="link link_strong" href="tel:+79050845231">+7 (905) 084-52-31</a>
+				</td>
+			</tr>
+			<tr>
+				<td><span>Офис продаж для косметологов<strong></td>
+				<td><a class="link link_strong" href="tel:+73852534901">+7 (3852) 534-901</a></td>
+			</tr>
+		</table>
+	</div>
+</header>
+	<div class="page__content">
+		<div class="breadcrumbs">
+			<ul class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a href="#">Главная</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<a href="#">Подбор услуги</a>
+				</li>
+			</ul>
+		</div>
+		<div class="section section_wh">
+			<div class="container">
+				<h2 class="title title_section">Цены</h2>
+				<div class="section__content section__content_page">
+					<span class="caption caption_big">Консультации специалистов</span>
+					<ul class="procedures">
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+					</ul>
+					<span class="caption caption_big">Консультации специалистов</span>
+					<ul class="procedures">
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+						<li class="procedures__item">
+							<span class="procedures__name" data-name="Услуга">Лазерная биоревитализация лица</span>
+							<span data-name="Код услуги">9712751923</span>
+							<span class="procedures__price" data-name="Стоимость">3 000 р.</span>
+							<button class="btn btn_tr">Записаться на процедуру</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="footer">
+	<div class="footer__container container">
+		<div class="social">
+			<a href="#vk" class="social__link social__link_vk"><i class="fab fa-vk"></i></a>
+			<a href="#inst" class="social__link social__link_inst"><i class="fab fa-instagram"></i></a>
+			<a href="#fb" class="social__link social__link_fb"><i class="fab fa-facebook-f"></i></a>
+			<a href="#flamp" class="social__link social__link_flamp">
+				<svg>
+					<use xlink:href="#flamp"/>
+				</svg>
+			</a>
+		</div>
+		<div class="footer__content">
+			<div class="footer__row">
+				<div class="footer__cell">
+					<span class="footer__caption"><strong>График работы</strong></span>
+					<p>пн-сб: 09:00 - 20:00<br>вс: выходной</p>
+				</div>
+				<div class="footer__cell">
+					<p>Информация о препаратах на нашем сайте предназначена исключительно для информационных целей об ассортименте продукции, области ее применения и основных характеристиках. Лекарственные препараты и медицинские изделия, указанные на сайте, могут применяться только по назначению врача.</p>
+				</div>
+			</div>
+			<div class="footer__row">
+				<div class="footer__cell">
+					<span class="footer__caption"><strong>Как проехать</strong></span>
+					<p>пр-т. Ленина №10</p>
+				</div>
+				<div class="footer__cell">
+					<p>Данные о продукции, доступные на сайте, не включают полную информацию медицинского характера. Данный сайт не содержит медицинских рекомендаций.</p>
+				</div>
+			</div>
+			<div class="footer__row">
+				<div class="footer__cell">
+					<a href="#" class="link">Показать на карте</a>
+				</div>
+				<div class="footer__cell">
+					<p>© 2017 Евромедика</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer__logo">
+			<a href="#">
+				<img src="img/logo-normal.png" alt="">
+			</a>
+		</div>
+	</div>
+</footer>
+
+	<script src="js/libs.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
