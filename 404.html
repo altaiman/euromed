@@ -50,17 +50,83 @@
 		</div>
 		<div class="header__block">
 			<nav class="nav">
-	<a href="#">О клинике</a>
-	<a href="#">Желания</a>
-	<a href="#">Лицо</a>
-	<a href="#">Тело</a>
-	<a href="#">Акции</a>
-	<a href="#">Цены</a>
-	<a href="#">Контакты</a>
+	<ul class="nav__list">
+		<li class="nav__item">
+			<a href="#">О клинике</a>
+		</li>
+		<li class="nav__item nav__item_drop">
+			<a href="#">Желания</a>
+			<div class="drop">
+				<div class="drop__block">
+					<span class="drop__caption">Мой возраст</span>
+					<ul class="drop__list">
+						<li><a href="#">13-25 лет</a></li>
+						<li><a href="#">25-35 лет</a></li>
+						<li><a href="#">35-45 лет</a></li>
+						<li><a href="#">от 45 лет</a></li>
+					</ul>
+				</div>
+				<div class="drop__block">
+					<span class="drop__caption">Я хочу</span>
+					<ul class="drop__list">
+						<li><a href="#">Омолодить</a></li>
+						<li><a href="#">Удалить</a></li>
+						<li><a href="#">Лифтинг</a></li>
+						<li><a href="#">Избавиться</a></li>
+						<li><a href="#">Освежить</a></li>
+						<li><a href="#">Изменить</a></li>
+						<li><a href="#">Вылечить</a></li>
+					</ul>
+				</div>
+				<div class="drop__block">
+					<span class="drop__caption">Часть тела</span>
+					<ul class="drop__list drop__list_two">
+						<li><a href="#">Лицо</a></li>
+						<li><a href="#">Тело</a></li>
+						<li><a href="#">Брови</a></li>
+						<li><a href="#">Нос</a></li>
+						<li><a href="#">Губы</a></li>
+						<li><a href="#">Шея</a></li>
+						<li><a href="#">Декольте</a></li>
+						<li><a href="#">Руки</a></li>
+						<li><a href="#">Фигура</a></li>
+					</ul>
+				</div>
+				<div class="drop__block">
+					<span class="drop__caption">Методика</span>
+					<ul class="drop__list">
+						<li><a href="#">Аппаратная</a></li>
+						<li><a href="#">Инъекционная</a></li>
+						<li><a href="#">Лазерная</a></li>
+						<li><a href="#">Уходовые средства</a></li>
+						<li><a href="#">Пермаментный макияж</a></li>
+						<li><a href="#">Beauty услуги</a></li>
+					</ul>
+				</div>
+			</div>
+		</li>
+		
+		<li class="nav__item">
+			<a href="#">Лицо</a>
+		</li>
+		<li class="nav__item">
+			<a href="#">Тело</a>
+		</li>
+		<li class="nav__item">
+			<a href="#">Акции</a>
+		</li>
+		<li class="nav__item">
+			<a href="#">Цены</a>
+		</li>
+		<li class="nav__item">
+			<a href="#">Контакты</a>
+		</li>
+		
+	</ul>
 </nav>
 		</div>
 		<div class="header__block">
-			<button class="btn btn_pink btn_record">Записаться на прием</button>
+			<button class="btn btn_pink btn_record" data-open="record">Записаться на прием</button>
 		</div>
 	</div>
 	<div class="modal modal_phones" data-modal="phones">
